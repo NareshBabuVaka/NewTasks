@@ -19,10 +19,9 @@ public class EmployeeServiceImplementation implements EmployeeService {
 	private EmployeeRepository employeeRepositary;
 
 	@Override
-	public String saveEmployee(EmployeeEntity employee) {
+	public EmployeeEntity saveEmployee(EmployeeEntity employee) {
 
-		employeeRepositary.save(employee);
-		return "The data entered by you is inserted successfully...";
+		return employeeRepositary.save(employee);
 
 	}
 
@@ -32,10 +31,11 @@ public class EmployeeServiceImplementation implements EmployeeService {
 		List<EmployeeEntity> employees = employeeRepositary.findAll(Sort.by(Sort.Direction.ASC, "employeeName"));
 		return employees;
 
-//		   List<EmployeeEntity> employees = employeeRepositary.findAll();
-//		    Collections.sort(employees); 
-//		    return employees;
-//		 
+//		List<EmployeeEntity> employees = employeeRepositary.findAll();
+//		Collections.sort(employees);
+//		System.out.println("Getting data from DB : " + employees);
+//
+//		return employees;
 
 //		  List<EmployeeEntity> newEmployees = new ArrayList<>(); List<EmployeeEntity>
 //		  employees = employeeRepositary.findAll(); Collections.sort(employees);

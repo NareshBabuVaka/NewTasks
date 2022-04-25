@@ -33,9 +33,8 @@ public class EmployeeController {
 	}
 
 	@PostMapping("/Employee")
-	public String saveEmployee(@RequestBody EmployeeEntity employee) {
-		employeeService.saveEmployee(employee);
-		return "The data entered by you is saved successfully...";
-	}
+	public EmployeeEntity saveEmployee(@RequestBody EmployeeEntity employee) {
+		return employeeService.saveEmployee(employee);
+ 	}
 
 }

@@ -75,6 +75,21 @@ public class EmployeeEntity implements Comparable<EmployeeEntity> {
 		this.employeeGender = employeeGender;
 	}
 
+	public EmployeeEntity(Integer employeeId, String employeeName, Integer employeeAge, double employeeSalary,
+			String employeeJobTitle, String employeeGender) {
+		super();
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+		this.employeeAge = employeeAge;
+		this.employeeSalary = employeeSalary;
+		this.employeeJobTitle = employeeJobTitle;
+		this.employeeGender = employeeGender;
+	}
+
+	public EmployeeEntity() {
+		super();
+	}
+
 	@Override
 	public int compareTo(EmployeeEntity o) {
 

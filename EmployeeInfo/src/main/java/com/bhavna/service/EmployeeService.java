@@ -6,7 +6,7 @@ import com.bhavna.entity.EmployeeEntity;
 
 public interface EmployeeService {
 
-	public String saveEmployee(EmployeeEntity employee);
+	public EmployeeEntity saveEmployee(EmployeeEntity employee);
 
 	public List<EmployeeEntity> getEmployees();
 
